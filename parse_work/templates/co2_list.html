@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly CO2 datas for the year{{ year }}</title>
+</head>
+<body>
+
+
+ {% if co2_datas.exists %}
+ <h1 align="center"> Monthly CO2 Datas For The Year {{ year }}</h1>
+  <table align="center" width="40%">
+       <tr>
+            <th width="30%">month</th>
+            <th width="30%">monthly_average</th>
+            <th width="30%">de_season_alized</th>
+            <th width="30%">st_dev_mon</th>
+            <th width="30%">unc_of_mean</th>
+       </tr>
+       {% for data in co2_datas %}
+       <tr align="center">
+             <td>{{ data.month }}</td>
+             <td>{{ data.monthly_average }}</td>
+             <td>{{ data.de_season_alized }}</td>
+             <td>{{ data.st_dev_mon }}</td>
+             <td>{{ data.unc_of_mean }}</td>
+       </tr>
+       {% endfor %}
+  </table>
+ {% else %}
+     <h1 align="center"> Sorry, figures for {{ year }} have not yet been recorded</h1>
+ {% endif %}
+
+
+
+</body>
+</html>
