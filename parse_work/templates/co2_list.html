@@ -9,13 +9,16 @@
 
  {% if co2_datas.exists %}
  <h1 align="center"> Monthly CO2 Datas For The Year {{ year }}</h1>
+
+     <hr/>
+     <br>
   <table align="center" width="40%">
        <tr>
-            <th width="30%">month</th>
-            <th width="30%">monthly_average</th>
-            <th width="30%">de_season_alized</th>
-            <th width="30%">st_dev_mon</th>
-            <th width="30%">unc_of_mean</th>
+            <th width="12%">month</th>
+            <th width="25%">monthly_average</th>
+            <th width="25%">de_season_alized</th>
+            <th width="19%">st_dev_mon</th>
+            <th width="19%">unc_of_mean</th>
        </tr>
        {% for data in co2_datas %}
        <tr align="center">
