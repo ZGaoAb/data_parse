@@ -15,7 +15,7 @@ class Command(BaseCommand):
         Temperature.objects.all().delete()
         Co2.objects.all().delete()
         print("tables dropped successfully")
-        # create table again
+        # create table
 
         # open the file to read it into the database
         base_dir = Path(__file__).resolve().parent.parent.parent.parent
